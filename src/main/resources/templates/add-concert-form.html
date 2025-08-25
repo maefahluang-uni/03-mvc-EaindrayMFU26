@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,12 @@
 </head>
 <body>
     <h1>Add Concert</h1>
-    <!-- add form for adding concert-->
-
+    <form action="/concerts" method="post">
+        Title: <input type="text" name="title" required><br>
+        Description: <input type="text" name="description" required><br>
+        Date: <input type="date" name="date"><br>  <!-- Removed required -->
+        Performer: <input type="text" name="performer"><br>  <!-- Removed required -->
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>
